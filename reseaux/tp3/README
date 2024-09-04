@@ -1,0 +1,31 @@
+# -*- org -*-
+
+* Description
+  Le serveur reçoit un tableau d'entier et le retourne en ayant supprimé les
+  zéros.
+  Le client génère un tableau aléatoire, l'envoie au serveur puis affiche la
+  réponse obtenue.
+
+* Usage
+** Serveur : ./serveur [option] [port]
+  -h        affiche l'aide et quitte le programme
+  -d        active les informations de debug
+  -s        pour les communications, la taille du tableau est de type 'size_t'
+            (8 octets) au lieu de 'unsigned int' (4 octets) par défaut
+  -m N      taille maximum du tableau acceptée par le serveur;
+            utiliser -1 pour ne pas mettre de limite (-1 par défaut)
+  -n N      nombre maximum de valeurs à afficher pour un tableau;
+            utiliser -1 pour ne ne pas mettre de limite (20 par défaut)
+  port      port d'écoute (7777 par défaut)
+
+** Client  : ./client [option] taille zéros [serveur [port]]
+  -h        affiche l'aide et quitte le programme
+  -d        active les informations de debug
+  -s        pour les communications, la taille du tableau est de type 'size_t'
+            (8 octets) au lieu de 'unsigned int' (4 octets) par défaut
+  -n N      nombre maximum de valeurs à afficher pour un tableau;
+            utiliser -1 pour ne ne pas mettre de limite (20 par défaut)
+  taille    taille du tableau
+  zéros     nombre de zéros dans le tableau
+  serveur   adresse du serveur (127.0.0.1 par défaut)
+  port      port du serveur (7777 par défaut)

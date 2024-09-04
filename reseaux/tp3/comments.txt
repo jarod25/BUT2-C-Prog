@@ -1,0 +1,9 @@
+gcc -g -Wall -Wextra -Og -o serveuri1 serveuri1.c client_serveur.a
+
+gcc -g -Wall -Wextra -Og -o serveuri2 serveuri2.c client_serveur.a
+
+gcc -g -Wall -Wextra -Og -o serveurp1 serveurp1.c client_serveur.a
+
+gcc -g -Wall -Wextra -Og -o serveurp2 serveurp2.c client_serveur.a
+
+gcc -g -Wall -Wextra -Og -o client client.c client_serveur.a

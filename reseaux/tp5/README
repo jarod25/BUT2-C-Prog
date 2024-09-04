@@ -1,0 +1,29 @@
+# -*- org -*-
+
+* Description
+  Le serveur reçoit un message, l'affiche et renvoie une réponse au client.
+  Le client lit un message sur son entrée standard (alternativement sur sa ligne
+  de commande) et l'envoie au serveur.  Il attend ensuite la réponse du serveur
+  qu'il affiche dès sa réception.
+  Toutes les communications se font en UDP.
+
+* Usage
+** Serveur : ./serveur [option] [port]
+  -h        affiche cette aide
+  -d        active les messages de debug
+  -n        ne pas envoyer de réponse aux clients
+  -s        n'affiche pas le contenu des messages
+  port      port d'écoute du serveur (défaut: 5353)
+
+** Client  : ./client [option] [serveur [port [mots...]]]
+  -h        affiche cette aide
+  -d        active les messages de debug
+  -s        n'affiche pas le contenu des messages.
+            Doubler l'option pour cacher également la réponse du serveur
+  -t n      temps d'attente maximal pour la réponse, en secondes (défaut: 1)
+            Utiliser la valeur 0 pour un temps d'attente infini.
+  serveur   adresse du serveur (défaut: 127.0.0.1)
+  port      port d'écoute du serveur (défaut: 5353)
+  mots...   s'ils sont donnés, le message est constitué des différents mots
+            séparés par des espaces. Sinon, le message est lu depuis l'entrée
+            standard.

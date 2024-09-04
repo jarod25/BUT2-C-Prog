@@ -1,0 +1,6 @@
+gcc -g -Og -Wall -Wextra -o client client.c
+gcc -g -Og -Wall -Wextra -o serveurbase serveurbase.c
+gcc -g -Og -Wall -Wextra -o serveur1 serveur1.c
+gcc -g -Og -Wall -Wextra -o serveur2 serveur2.c
+gcc -g -Og -Wall -Wextra -o serveur3 serveur3.c
+gcc -g -Og -Wall -Wextra -o serveurthreads serveurthreads.c -lpthread

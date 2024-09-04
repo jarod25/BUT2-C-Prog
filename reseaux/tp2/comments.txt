@@ -1,0 +1,3 @@
+gcc -g -Wall -Wextra -Og -o serveur serveur.c client_serveur.a
+gcc -g -Wall -Wextra -Og -o client client.c client_serveur.a
+
